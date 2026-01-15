@@ -61,8 +61,8 @@ const perguntas = [
     texto: "5 - Você teve algum problema ou dificuldade durante o atendimento?",
     comImagens: true,  // ← ADICIONE ESTA LINHA
     opcoes: [
-      { valor: "Sim, tive!", label: "Sim"},  // ← MUDE
-      { valor: "Não, está tudo bem!", label: "Não" }  // ← MUDE
+      { valor: "SIM", label: "Sim"},  // ← MUDE
+      { valor: "NÃO", label: "Não"}  // ← MUDE
     ],
     condicional: true
   }
@@ -188,12 +188,12 @@ function mostrarTelaCategorias(pergunta) {
 /* =========================
    RESPONDER
 ========================= */
-ffunction responderNPS(valor) {
+function responderNPS(valor) {
   if (bloqueado) return;
   bloqueado = true;
 
   const perguntaAtual = perguntas[indice];
-  respostas[perguntaAtual.id] = String(valor);  // ← MUDE PARA String(valor)
+  respostas[perguntaAtual.id] = valor;
 
   proximaPergunta();
 }
