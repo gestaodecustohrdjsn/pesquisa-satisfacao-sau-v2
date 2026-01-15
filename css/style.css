@@ -121,24 +121,20 @@ h2 {
 /* ===== OPÇÕES NPS (0-10) ===== */
 
 .opcoes-nps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 10px;
+  margin-top: 40px;
 }
 
 .opcoes-nps button {
-  aspect-ratio: 1;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  font-size: 1.2em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
-  font-family: 'Oswald', sans-serif;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .opcoes-nps button:hover {
@@ -166,37 +162,28 @@ h2 {
 
 .opcoes-categorias {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .opcoes-categorias label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  background: var(--turquesa-15);
-  border: 2px solid transparent;
-  border-radius: 12px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
   cursor: pointer;
+  text-align: center;
   transition: all 0.3s ease;
-  font-size: 1em;
-  font-weight: 500;
-  color: #222;
 }
 
 .opcoes-categorias label:hover {
-  background: rgba(92,225,230,0.25);
-  transform: translateY(-2px);
+  border-color: #5CE1E6;
+  background-color: rgba(92, 225, 230, 0.1);
 }
 
-.opcoes-categorias input[type="radio"] {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  accent-color: var(--turquesa-60);
+.opcoes-categorias input[type="radio"]:checked + label {
+  border-color: #0097B2;
+  background-color: rgba(0, 151, 178, 0.1);
 }
 
 .opcoes-categorias label.selected {
@@ -329,3 +316,17 @@ h2 {
   transform: translateX(0);
   opacity: 1;
 }
+
+/* Estilo para botões com imagens */
+.opcoes button img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.opcoes button span strong {
+  font-weight: 700;
+  font-size: 18px;
+}
+
