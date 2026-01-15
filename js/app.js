@@ -188,12 +188,12 @@ function mostrarTelaCategorias(pergunta) {
 /* =========================
    RESPONDER
 ========================= */
-function responderNPS(valor) {
+ffunction responderNPS(valor) {
   if (bloqueado) return;
   bloqueado = true;
 
   const perguntaAtual = perguntas[indice];
-  respostas[perguntaAtual.id] = valor;
+  respostas[perguntaAtual.id] = String(valor);  // ← MUDE PARA String(valor)
 
   proximaPergunta();
 }
