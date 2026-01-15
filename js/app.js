@@ -2,7 +2,7 @@
    CONFIG GERAL
 ========================= */
 const URL_APPS_SCRIPT =
-  "https://script.google.com/macros/s/AKfycbx7iYRrxsWgPkuZz3j-qw_Demn5-fMRzhxbiuYdMbnMHf5grvxJpEFkXqyprGG5M6PM/exec";
+  "https://script.google.com/macros/s/AKfycbyhE8_vAHx-Qkcl2byvZX5rr1OOEVAeBpFfETOWzsEK1W7kZOduGt5YKEeT4mwfgL5K/exec";
 
 // setor via URL ?setor=Ambulatorio | ?setor=Pronto%20Socorro
 const params = new URLSearchParams(window.location.search);
