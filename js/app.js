@@ -55,13 +55,14 @@ const perguntas = [
       "Tempo de Espera"
     ]
   },
-  {
+    {
     id: "problema",
     tipo: "opcoes",
     texto: "5 - Você teve algum problema ou dificuldade durante o atendimento?",
+    comImagens: true,  // ← ADICIONE ESTA LINHA
     opcoes: [
-      { valor: "Sim", label: "Sim, tive dificuldades" },
-      { valor: "Não", label: "Não, tudo bem" }
+      { valor: "Sim", label: "Sim", imagem: "images/dificuldade.png" },  // ← MUDE
+      { valor: "Não", label: "Não", imagem: "images/ok.png" }  // ← MUDE
     ],
     condicional: true
   }
@@ -147,6 +148,11 @@ function mostrarTelaOpcoes(pergunta) {
       btn.innerHTML = `
         <img src="${opcao.icone}" alt="${opcao.label}">
         <span>${opcao.label}</span>
+      `;
+    } else if (pergunta.comImagens) {  // ← NOVA CONDIÇÃO
+      btn.innerHTML = `
+        <img src="${opcao.imagem}" alt="${opcao.label}">
+        <span><strong>${opcao.label}</strong></span>
       `;
     } else {
       btn.innerHTML = `<span>${opcao.label}</span>`;
@@ -300,15 +306,8 @@ function enviarDados() {
   dados.append("setor", SETOR);
 
   perguntas.forEach(p => {
-    dados.append(p.id, respostas[p.id] || "");
+    dados.append(p.id, respostas[p.id] !== undefined ? respostas[p.id] : "");  // ← NOVA
   });
-
-  fetch(URL_APPS_SCRIPT, {
-    method: "POST",
-    body: dados,
-    mode: "no-cors"
-  }).catch(() => salvarOffline(dados.toString()));
-}
 
 /* =========================
    OFFLINE
