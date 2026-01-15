@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa de Satisfação</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header-titulo">
+      <img src="images/logo_hospital.png" alt="Logo Hospital">
+
+      <div class="titulo-texto">
+        <h1>Pesquisa de Satisfação</h1>
+        <div class="divider"></div>
+      </div>
+    </header>
+
+    <!-- TELA PERGUNTA PADRÃO (3 opções com ícones) -->
+    <section id="tela-pergunta" class="tela">
+      <h2 id="pergunta">Pergunta padrão</h2>
+
+      <div class="opcoes" id="opcoes-container">
+        <!-- Preenchido dinamicamente pelo JS -->
+      </div>
+    </section>
+
+    <!-- TELA NPS (0-10) -->
+    <section id="tela-nps" class="tela hidden">
+      <h2 id="pergunta-nps">Em uma escala de 0 a 10, o quanto você recomendaria este hospital a um amigo ou familiar?</h2>
+
+      <div class="opcoes-nps" id="opcoes-nps">
+        <!-- Preenchido dinamicamente pelo JS -->
+      </div>
+    </section>
+
+    <!-- TELA CATEGORIAS (Pergunta 4 - antes era 5) -->
+    <section id="tela-categorias" class="tela hidden">
+      <h2 id="pergunta-categorias">Qual etapa mais impactou sua experiência?</h2>
+
+      <div class="opcoes-categorias" id="opcoes-categorias">
+        <!-- Preenchido dinamicamente pelo JS -->
+      </div>
+    </section>
+
+    <!-- TELA QR CODE (Pergunta 5 - antes era 4) -->
+    <section id="tela-qrcode" class="tela hidden">
+      <h2>Relatório de Problema</h2>
+      <p class="mensagem-qrcode">Escaneie o QR Code para relatar o problema</p>
+      
+      <div class="qrcode-container">
+        <img src="images/qrcode-form.png" alt="QR Code para formulário">
+      </div>
+
+      <p class="mensagem-tempo">Você será redirecionado automaticamente em <span id="tempo-restante">8</span> segundos</p>
+      <button class="btn-prosseguir" onclick="prosseguirDoQRCode()">Prosseguir agora</button>
+    </section>
+
+    <!-- TELA FINAL -->
+    <section id="tela-final" class="tela hidden">
+      <h2>Obrigado pela sua participação</h2>
+      <p class="mensagem-final">
+        A pesquisa será reiniciada automaticamente
+      </p>
+    </section>
+
+  </div>
+
+  <script src="js/app.js?v=6"></script>
+</body>
+</html>
