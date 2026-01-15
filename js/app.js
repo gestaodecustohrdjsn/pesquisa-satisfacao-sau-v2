@@ -61,8 +61,9 @@ const perguntas = [
     texto: "5 - Você teve algum problema ou dificuldade durante o atendimento?",
     comImagens: true,  // ← ADICIONE ESTA LINHA
     opcoes: [
-      { valor: "Sim", label: "Tive um problema ou dificuldade!", imagem: "images/dificuldade.png" },  // ← MUDE
-      { valor: "Não", label: "Nenhum problema, tudo certo!", imagem: "images/ok.png" }  // ← MUDE
+      { valor: "Sim", label: "Tive um problema ou dificuldade!", imagem: "images/dificuldade.png" },
+      { valor: "Não", label: "Nenhum problema, tudo certo!", imagem: "images/ok.png" }
+
     ],
     condicional: true
   }
