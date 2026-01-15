@@ -75,7 +75,7 @@ const perguntas = [
 let indice = 0;
 let respostas = {};
 let bloqueado = false;
-let tempoQRCode = 8;
+let tempoQRCode = 15;
 let intervaloQRCode = null;
 
 /* =========================
