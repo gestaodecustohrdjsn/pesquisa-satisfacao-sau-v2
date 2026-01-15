@@ -308,7 +308,7 @@ function enviarDados() {
   perguntas.forEach(p => {
     dados.append(p.id, respostas[p.id] !== undefined ? respostas[p.id] : "");  // ← NOVA
   });
-
+}
 /* =========================
    OFFLINE
 ========================= */
