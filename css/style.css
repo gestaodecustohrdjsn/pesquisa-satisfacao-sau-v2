@@ -338,3 +338,33 @@ h2 {
   font-weight: 700;
   font-size: 18px;
 }
+
+/* ===== DESABILITAR ZOOM ===== */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+/* Previne zoom duplo ao tocar */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Desabilita pinch-zoom */
+
+body {
+  touch-action: pan-x pan-y;
+}
+
+/* Para navegadores que ainda permitem zoom */
+@media (max-width: 1024px) {
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+}
+
