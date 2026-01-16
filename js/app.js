@@ -383,7 +383,7 @@ function reiniciar() {
   indice = 0;
   respostas = {};
   bloqueado = false;
-  tempoQRCode = 8;
+  /*tempoQRCode = 8;*/
 
   if (intervaloQRCode) clearInterval(intervaloQRCode);
 
