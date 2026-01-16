@@ -239,24 +239,26 @@ h2 {
 /* ===== TELA QR CODE ===== */
 
 .mensagem-qrcode {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .qrcode-container {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  margin: 22px 0;
 }
 
 .qrcode-container img {
-  max-width: 300px;
+  max-width: 285px;
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,151,178,0.2);
 }
+
+
 
 .mensagem-tempo {
   opacity: 0.7;
@@ -267,7 +269,7 @@ h2 {
 
 .btn-prosseguir {
   background: var(--turquesa-100);
-  color: #222;
+  color: #f2f2f2;
   border: none;
   border-radius: 12px;
   padding: 12px 30px;
@@ -402,4 +404,12 @@ body {
     -ms-user-select: none;
   }
 }
+
+#tela-qrcode h2 {
+  font-size: 2.0em;
+  font-weight: 700;
+  color: #0097B2;
+  margin-bottom: 20px;
+}
+
 
