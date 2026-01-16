@@ -25,9 +25,9 @@ const perguntas = [
     texto: "2 - VOCÊ SE SENTIU SEGURO DURANTE O ATENDIMENTO?",
     comIcones: true,
     opcoes: [
-      { valor: "POUCO SEGURO", label: "Pouco Seguro", icone: "images/Insatisfeito.png" },
-      { valor: "SEGURO", label: "Seguro", icone: "images/Satisfeito.png" },
-      { valor: "MUITO SEGURO", label: "Muito Seguro", icone: "images/Muito Satisfeito.png" }
+      { valor: "Pouco Seguro", label: "POUCO SEGURO", icone: "images/Insatisfeito.png" },
+      { valor: "Seguro", label: "SEGURO", icone: "images/Satisfeito.png" },
+      { valor: "Muito Seguro", label: "MUITO SEGURO", icone: "images/Muito Satisfeito.png" }
     ]
   },
   {
@@ -36,9 +36,9 @@ const perguntas = [
     texto: "3 - COMO VOCÊ AVALIA A CLAREZA DAS INFORMAÇÕES RECEBIDAS?",
     comIcones: true,
     opcoes: [
-      { valor: "INSATISFEITO", label: "Insatisfeito", icone: "images/Insatisfeito.png" },
-      { valor: "SATISFEITO", label: "Satisfeito", icone: "images/Satisfeito.png" },
-      { valor: "MUITO SATISFEITO", label: "Muito Satisfeito", icone: "images/Muito Satisfeito.png" }
+      { valor: "Insatisfeito", label: "INSATISFEITO", icone: "images/Insatisfeito.png" },
+      { valor: "Satisfeito", label: "SATISFEITO", icone: "images/Satisfeito.png" },
+      { valor: "Muito Satisfeito", label: "MUITO SATISFEITO", icone: "images/Muito Satisfeito.png" }
     ]
   },
     {
@@ -48,7 +48,7 @@ const perguntas = [
     comIcones: true,  // ← ADICIONE ISTO
     opcoes: [
       { label: "RECEPÇÃO", icone: "images/recepção.png" },
-      { label: "ENFERMAGEMm", icone: "images/enfermagem.png" },
+      { label: "ENFERMAGEM", icone: "images/enfermagem.png" },
       { label: "MÉDICO", icone: "images/medico.png" },
       { label: "EXAMES", icone: "images/exames.png" },
       { label: "HOTELARIA / LIMPEZA", icone: "images/limpeza.png" },
