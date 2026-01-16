@@ -309,7 +309,8 @@ function enviarDados() {
   perguntas.forEach(p => {
     dados.append(p.id, respostas[p.id] || "");  // ← MUDE ESTA LINHA
   });
-   
+}
+
 /* =========================
    OFFLINE
 ========================= */
