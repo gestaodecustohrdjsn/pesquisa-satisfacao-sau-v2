@@ -41,18 +41,19 @@ const perguntas = [
       { valor: "Muito Satisfeito", label: "Muito Satisfeito", icone: "images/Muito Satisfeito.png" }
     ]
   },
-  {
+    {
     id: "etapa",
     tipo: "categorias",
     texto: "4 - Qual etapa mais impactou sua experiência?",
+    comIcones: true,  // ← ADICIONE ISTO
     opcoes: [
-      "Recepção",
-      "Enfermagem",
-      "Médico",
-      "Exames",
-      "Hotelaria / Limpeza",
-      "Alta / Orientações",
-      "Tempo de Espera"
+      { label: "Recepção", icone: "images/recepção.png" },
+      { label: "Enfermagem", icone: "images/enfermagem.png" },
+      { label: "Médico", icone: "images/medico.png" },
+      { label: "Exames", icone: "images/exames.png" },
+      { label: "Hotelaria / Limpeza", icone: "images/limpeza.png" },
+      { label: "Alta / Orientações", icone: "images/alta.png" },
+      { label: "Tempo de Espera", icone: "images/tempo.png" }
     ]
   },
   {
@@ -175,11 +176,33 @@ function mostrarTelaCategorias(pergunta) {
     const input = document.createElement("input");
     input.type = "radio";
     input.name = "categoria";
-    input.value = opcao;
-    input.onchange = () => responderCategoria(opcao);
+    
+    // Se tiver ícones, usa label como valor
+    const valor = pergunta.comIcones ? opcao.label : opcao;
+    input.value = valor;
+    input.onchange = () => responderCategoria(valor);
 
     label.appendChild(input);
-    label.appendChild(document.createTextNode(opcao));
+    
+    if (pergunta.comIcones) {
+      // Criar container com ícone + texto
+      const container = document.createElement("div");
+      container.className = "categoria-item";
+      
+      const img = document.createElement("img");
+      img.src = opcao.icone;
+      img.alt = opcao.label;
+      
+      const texto = document.createElement("span");
+      texto.textContent = opcao.label;
+      
+      container.appendChild(img);
+      container.appendChild(texto);
+      label.appendChild(container);
+    } else {
+      label.appendChild(document.createTextNode(opcao));
+    }
+    
     opcoesCategorias.appendChild(label);
   });
 
