@@ -5,6 +5,7 @@
   --vermelho-light: #FF6B6B;
   --amarelo-light: #FFD93D;
   --verde-light: #6BCB77;
+  --azul-regional: #0b4776;
 }
 
 * {
@@ -241,13 +242,13 @@ h2 {
 .mensagem-qrcode {
   font-size: 1.4em;
   color: #555;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 .qrcode-container {
   display: flex;
   justify-content: center;
-  margin: 22px 0;
+  margin: 15px 0;
 }
 
 .qrcode-container img {
@@ -258,17 +259,15 @@ h2 {
   box-shadow: 0 8px 24px rgba(0,151,178,0.2);
 }
 
-
-
 .mensagem-tempo {
   opacity: 0.7;
   font-size: 1em;
-  margin: 20px 0;
+  margin: 15px 0;
   color: #666;
 }
 
 .btn-prosseguir {
-  background: var(--turquesa-100);
+  background: var(--azul-regional);
   color: #f2f2f2;
   border: none;
   border-radius: 12px;
