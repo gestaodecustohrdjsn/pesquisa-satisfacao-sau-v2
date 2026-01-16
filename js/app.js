@@ -246,7 +246,7 @@ function mostrarTelaQRCode() {
   ocultarTodasAsTelas();
   telaQRCode.classList.remove("hidden");
 
-  tempoQRCode = 8;
+  /*tempoQRCode = 8;*/
   document.getElementById("tempo-restante").innerText = tempoQRCode;
 
   // Limpar intervalo anterior se existir
