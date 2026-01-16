@@ -17,53 +17,53 @@ const perguntas = [
   {
     id: "nps",
     tipo: "nps",
-    texto: "1 - Em uma escala de 0 a 10, o quanto você recomendaria este hospital a um amigo ou familiar?"
+    texto: "1 - EM UMA ESCALA DE 0 A 10, O QUANTO VOCÊ RECOMENDARIA ESTE HOSPITAL A UM AMIGO OU FAMILIAR?"
   },
   {
     id: "seguranca",
     tipo: "opcoes",
-    texto: "2 - Você se sentiu seguro durante o atendimento?",
+    texto: "2 - VOCÊ SE SENTIU SEGURO DURANTE O ATENDIMENTO?",
     comIcones: true,
     opcoes: [
-      { valor: "Pouco Seguro", label: "Pouco Seguro", icone: "images/Insatisfeito.png" },
-      { valor: "Seguro", label: "Seguro", icone: "images/Satisfeito.png" },
-      { valor: "Muito Seguro", label: "Muito Seguro", icone: "images/Muito Satisfeito.png" }
+      { valor: "POUCO SEGURO", label: "Pouco Seguro", icone: "images/Insatisfeito.png" },
+      { valor: "SEGURO", label: "Seguro", icone: "images/Satisfeito.png" },
+      { valor: "MUITO SEGURO", label: "Muito Seguro", icone: "images/Muito Satisfeito.png" }
     ]
   },
   {
     id: "clareza",
     tipo: "opcoes",
-    texto: "3 - Como você avalia a clareza das informações recebidas?",
+    texto: "3 - COMO VOCÊ AVALIA A CLAREZA DAS INFORMAÇÕES RECEBIDAS?",
     comIcones: true,
     opcoes: [
-      { valor: "Insatisfeito", label: "Insatisfeito", icone: "images/Insatisfeito.png" },
-      { valor: "Satisfeito", label: "Satisfeito", icone: "images/Satisfeito.png" },
-      { valor: "Muito Satisfeito", label: "Muito Satisfeito", icone: "images/Muito Satisfeito.png" }
+      { valor: "INSATISFEITO", label: "Insatisfeito", icone: "images/Insatisfeito.png" },
+      { valor: "SATISFEITO", label: "Satisfeito", icone: "images/Satisfeito.png" },
+      { valor: "MUITO SATISFEITO", label: "Muito Satisfeito", icone: "images/Muito Satisfeito.png" }
     ]
   },
     {
     id: "etapa",
     tipo: "categorias",
-    texto: "4 - Qual etapa mais impactou sua experiência?",
+    texto: "4 - QUAL ETAPA MAIS IMPACTOU SUA EXPERIÊNCIA?",
     comIcones: true,  // ← ADICIONE ISTO
     opcoes: [
-      { label: "Recepção", icone: "images/recepção.png" },
-      { label: "Enfermagem", icone: "images/enfermagem.png" },
-      { label: "Médico", icone: "images/medico.png" },
-      { label: "Exames", icone: "images/exames.png" },
-      { label: "Hotelaria / Limpeza", icone: "images/limpeza.png" },
-      { label: "Alta / Orientações", icone: "images/alta.png" },
-      { label: "Tempo de Espera", icone: "images/tempo.png" }
+      { label: "RECEPÇÃO", icone: "images/recepção.png" },
+      { label: "ENFERMAGEMm", icone: "images/enfermagem.png" },
+      { label: "MÉDICO", icone: "images/medico.png" },
+      { label: "EXAMES", icone: "images/exames.png" },
+      { label: "HOTELARIA / LIMPEZA", icone: "images/limpeza.png" },
+      { label: "ALTA / ORIENTAÇÕES", icone: "images/alta.png" },
+      { label: "TEMPO DE ESPERA", icone: "images/tempo.png" }
     ]
   },
   {
     id: "problema",
     tipo: "opcoes",
-    texto: "5 - Você teve algum problema ou dificuldade durante o atendimento?",
+    texto: "5 - VOCÊ TEVE ALGUM PROBLEMA OU DIFICULDADE DURANTE O ATENDIMENTO?",
     comImagens: true,  // ← ADICIONE ESTA LINHA
     opcoes: [
-      { valor: "Sim", label: "Tive um problema ou dificuldade!", imagem: "images/dificuldade.png" },
-      { valor: "Não", label: "Nenhum problema, tudo certo!", imagem: "images/ok.png" }
+      { valor: "Sim", label: "TIVE UM PROBLEMA OU DIFICULDADE!", imagem: "images/dificuldade.png" },
+      { valor: "Não", label: "NENHUM PROBLEMA, TUDO CERTO!", imagem: "images/ok.png" }
 
     ],
     condicional: true
