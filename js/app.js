@@ -307,9 +307,16 @@ function enviarDados() {
   dados.append("setor", SETOR);
 
   perguntas.forEach(p => {
-    dados.append(p.id, respostas[p.id] || "");  // ← MUDE ESTA LINHA
+    dados.append(p.id, respostas[p.id] !== undefined ? respostas[p.id] : "");
   });
+
+  fetch(URL_APPS_SCRIPT, {
+    method: "POST",
+    body: dados,
+    mode: "no-cors"
+  }).catch(() => salvarOffline(dados.toString()));
 }
+
 
 /* =========================
    OFFLINE
