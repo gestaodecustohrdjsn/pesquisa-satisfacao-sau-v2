@@ -366,3 +366,29 @@ function reiniciar() {
 
   mostrarPergunta();
 }
+
+/* ===== BLOQUEAR ZOOM ===== */
+document.addEventListener('gesturestart', (e) => {
+  e.preventDefault();
+});
+
+document.addEventListener('touchmove', (e) => {
+  if (e.touches.length > 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Bloquear Ctrl + scroll
+document.addEventListener('wheel', (e) => {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// Bloquear Ctrl + +/- 
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+    e.preventDefault();
+  }
+});
+
