@@ -307,9 +307,9 @@ function enviarDados() {
   dados.append("setor", SETOR);
 
   perguntas.forEach(p => {
-    dados.append(p.id, respostas[p.id] !== undefined ? respostas[p.id] : "");  // ← NOVA
+    dados.append(p.id, respostas[p.id] || "");  // ← MUDE ESTA LINHA
   });
-}
+   
 /* =========================
    OFFLINE
 ========================= */
